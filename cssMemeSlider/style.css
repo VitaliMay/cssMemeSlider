@@ -54,12 +54,15 @@ h1 {
 	/* height: 24rem; */
 	margin: 5rem auto 0;
 	position: relative;
+
+
 	/* width: 48rem; */
 
-	width: 48rem;
+	/* width: 48rem; */
+	width: 64rem;
   /* height: 40rem; */
 
-  background-color: aqua;
+  /* background-color: aqua; */
 
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +74,8 @@ h1 {
 
 .slider {
   width: 100%;
-  height: 24rem;
+  /* height: 24rem; */
+  height: 32rem;
 
   flex-shrink: 0;
 
@@ -84,17 +88,39 @@ h1 {
 	
 	box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
 
-  background-color: azure;
+  /* background-color: azure; */
 }
 
 .slider-text {
   /* width: 20rem; */
 
-  width: 50%;
+  /* max-width: 70%; */
+  width: 60%;
 
   flex-shrink: 0;
   min-height: 5rem;
   background-color: cadetblue;
+
+  
+}
+
+.controls {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: flex-end;
+  /* margin-top: 1rem; */
+
+  /* background-color: blanchedalmond; */
+  background-color: aqua;
+
+  width: 40%;
+  /* width: 100%; */
+
+  /* min-height: 5rem; */
+
+  flex-shrink: 0;
+
+  /* align-items: center; */
 }
 
 
@@ -192,22 +218,7 @@ h1 {
 
 /********************************************************/
 
-.controls {
-  display: flex;
-  /* justify-content: center; */
-  justify-content: flex-end;
-  /* margin-top: 1rem; */
 
-  background-color: blanchedalmond;
-
-  max-width: 30%;
-
-  /* min-height: 5rem; */
-
-  flex-shrink: 0;
-
-  align-items: center;
-}
 
 .controls label {
   width: 2rem;
@@ -216,7 +227,7 @@ h1 {
   /* border: solid transparent 5px; */
 
   /* Увеличваю область нажатия (делаю бордер невидимым) */
-  border: solid antiquewhite 5px;
+  border: solid antiquewhite 0.5rem;
 
   border-radius: 50%;
   background-color: #888;
@@ -286,27 +297,59 @@ h1 {
 
 /******** Responsive design ******************************************************/
 
-/* 
+
 @media screen and (max-width: 1024px) {
   html {
-    font-size: calc(100vw / 820 * 10);
+    /* font-size: calc(100vw / 820 * 10); */
+    font-size: calc(100vw / 1024 * 10);
   }
 
-  .accordion_container {
-    max-width: 80vw;
-  }
-
-  .accordion_block {
-    max-width: 79vw;
-  }
 }
+
+
 
 @media screen and (max-width: 820px) {
   html {
     font-size: calc(100vw / 768 * 10);
   }
 
-  .accordion_container {
+  .slider-container {
+    flex-direction: column;
+  
+    row-gap: 2rem;
+
+    
+  }
+
+  .controls {
+    display: flex;
+    justify-content: center;
+
+    order: 1;
+
+
+    background-color: red;
+
+    width: 100%;
+  }
+
+  .slider-text {
+
+    width: 100%;
+
+    flex-shrink: 0;
+    min-height: 5rem;
+    background-color: blue;
+
+    order: 2;
+
+
+  }
+
+
+  
+
+  /* .accordion_container {
     max-width: 90vw;
   }
 
@@ -317,21 +360,24 @@ h1 {
   .mem {
     width: 48rem;
     height: 30rem;
-  }
+  } */
 }
 
 
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 500px) {
   html {
-    font-size: calc(100vw / 500 * 10);
+    font-size: calc(100vw / 600 * 10);
   }
 
-  .mem {
+  /* .mem {
     width: 44rem;
     height: 30rem;
-  }
+  } */
 
 }
+
+/*
 
 @media screen and (max-width: 500px) {
   html {
