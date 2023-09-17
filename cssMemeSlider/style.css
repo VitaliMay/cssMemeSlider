@@ -52,7 +52,10 @@ h1 {
 .slider-container {
 
 	margin: 0 auto 4rem;
-	position: relative;
+
+	/* position: relative; */
+  /****************************************/
+  /* overflow: hidden; */
 
   width: 70vw;
 
@@ -66,19 +69,17 @@ h1 {
 
 .slider {
   width: 100%;
-  /* height: 24rem; */
-  /* height: 32rem; */
+ 
   height: 35vw;
 
   flex-shrink: 0;
 
-  /* margin: 0 auto; */
-
 	/* height: inherit; */
+  /* width: inherit; */
 	overflow: hidden;
-	position: relative;
-	/* width: inherit; */
-	
+	/* position: relative; */
+  /**********************************/
+
 	box-shadow: 0 0 2rem rgba(0, 0, 0, .5);
 
   border-radius: 0.5rem;
@@ -114,11 +115,24 @@ h1 {
 
 
 .slides {
-	height: inherit;
+	/* height: inherit;
 	opacity: 0;
 	position: absolute;
 	width: inherit;
-	z-index: 0;
+	z-index: 0; */
+
+  height: 0;
+	opacity: 0;
+	/* width: 70%; */
+  visibility: hidden;
+
+  
+
+	/* height: 0; */
+	/* opacity: 0; */
+	/* position: absolute; */
+	/* width: 0; */
+	/* z-index: 0; */
 
 	transform: scale(1.5);
 
@@ -132,11 +146,17 @@ h1 {
 
 
 .text {
-	height: inherit;
+	/* height: inherit;
 	opacity: 0;
 	position: absolute;
 	width: inherit;
-	z-index: 0;
+	z-index: 0; */
+
+	height: 0;
+	opacity: 0;
+	width: 70%;
+  visibility: hidden;
+	
 
 	/* transform: scale(1.5); */
 
@@ -166,9 +186,21 @@ h1 {
 #mem_03:checked ~ .slider > .slide3,
 #mem_04:checked ~ .slider > .slide4,
 #mem_05:checked ~ .slider > .slide5 {
-	opacity: 1;
+	/* opacity: 1; */
+	/* z-index: 1; */
+  /* height: inherit; */
+  /* width: inherit; */
+	/* transform: scale(1); */
+
+	/* opacity: 1;
 	z-index: 1;
-	transform: scale(1);
+	transform: scale(1); */
+
+  height: inherit;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 2s, opacity 2s;
+  transform: scale(1);
 }
 
 #mem_01:checked ~ .slider-text > .text1,
@@ -177,9 +209,14 @@ h1 {
 #mem_04:checked ~ .slider-text > .text4,
 #mem_05:checked ~ .slider-text > .text5
 {
-	opacity: 1;
+	/* opacity: 1;
 	z-index: 1;
-	transform: scale(1);
+	transform: scale(1); */
+
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 2s, opacity 2s;
+  transform: scale(1);
 }
 
 
