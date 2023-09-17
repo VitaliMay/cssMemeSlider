@@ -137,7 +137,7 @@ h1 {
 	position: absolute;
 	width: inherit;
 	z-index: 0;
-  
+
 	/* transform: scale(1.5); */
 
 	transition: transform ease-in-out .5s, opacity ease-in-out .5s;
@@ -221,6 +221,9 @@ h1 {
 
 .controls label:hover {
   background-color: #555;
+}
+.controls label:active {
+  background-color: whitesmoke;
 }
 
 
